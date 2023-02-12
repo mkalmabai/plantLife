@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Plant_Life" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/whitegreen2</item>
+        <item name="colorPrimaryVariant">@color/whitegreen2</item>
+        <item name="colorOnPrimary">@color/greenicon</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/greenicon</item>
+        <item name="colorSecondaryVariant">@color/greenicon</item>
+        <item name="colorOnSecondary">@color/whitegreen2</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

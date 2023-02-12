@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.UserProileInfoFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data>
+    <variable
+        name="info"
+        type="com.example.plant_life.model.PlantViewModel" />
+</data>
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/profile_image"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <ImageView
+         android:id="@+id/profileIcon"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:src="@drawable/profile"/>
+
+     <TextView
+         android:id="@+id/fullName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="16dp"
+         android:textSize="20dp"
+         android:textStyle="bold"
+         app:layout_constraintStart_toEndOf="@+id/profileIcon"
+         app:layout_constraintTop_toTopOf="parent"
+         android:text="@{info.firstName}"/>
+
+     <TextView
+         android:id="@+id/Bio"
+         android:layout_width="200dp"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="8dp"
+         android:layout_marginTop="8dp"
+         android:text="@{info.bio}"
+         android:textSize="20dp"
+         android:textStyle="italic"
+         app:layout_constraintStart_toEndOf="@+id/profileIcon"
+         app:layout_constraintTop_toBottomOf="@+id/fullName" />
+
+     <View
+         android:id="@+id/view"
+         android:layout_width="match_parent"
+         android:layout_height="2dp"
+         android:layout_marginTop="16dp"
+         android:background="@color/whitegreen2"
+         app:layout_constraintStart_toEndOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/profileIcon"/>
+
+
+
+     <Button
+         android:id="@+id/setalarmButton"
+         android:layout_width="300dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="100dp"
+         android:text="@string/set_alarm"
+         android:textColor="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/view" />
+
+     <Button
+         android:id="@+id/EditButton"
+         android:layout_width="300dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="8dp"
+         android:text="@string/edit_info"
+         android:textColor="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/setalarmButton" />
+
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "514687203919",
+    "firebase_url": "https://okok-6f6eb-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "okok-6f6eb",
+    "storage_bucket": "okok-6f6eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514687203919:android:dd7759b998421d0f82c83a",
+        "android_client_info": {
+          "package_name": "com.example.plant_life"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514687203919-9hmgg2f7449v8smqjn8vaphai1dr2bpi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArEN_1Ces-yCR8ug8aNbV3FsARwIhcRxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514687203919-9hmgg2f7449v8smqjn8vaphai1dr2bpi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

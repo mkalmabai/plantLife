@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="plantInfo"
+            type="com.example.plant_life.dataApi.ResponseItem" />
+        <variable
+            name="viewModel"
+            type="com.example.plant_life.model.PlantViewModel" />
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:cardUseCompatPadding="true"
+        card_view:cardBackgroundColor="@color/whitegreen1"
+        card_view:cardElevation="0dp"
+        app:cardCornerRadius="20dp">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:background="#79575420"
+            android:backgroundTint="#61FFFFFF">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/plant_image"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:padding="6dp"
+                android:scaleType="fitXY"
+                app:shapeAppearance="@style/RoundedSquare"
+                android:layout_marginTop="-4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:imageUrl="@{plantInfo.image}"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="36dp"
+                android:textAlignment="center"
+                android:text="@{plantInfo.plantName}"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.254"
+                app:layout_constraintStart_toEndOf="@id/plant_image"
+                app:layout_constraintTop_toTopOf="@id/plant_image" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/title" />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="180dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/greenicon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/plant_image"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonShare"
+                style="@style/RoundedSquare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="28dp"
+                android:clickable="true"
+                android:minWidth="0dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="5dp"
+                app:backgroundTint="@color/whitegreen1"
+                app:icon="@drawable/baseline_share"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/plant_image"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <ImageView
+                android:id="@+id/like_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/favorite_border"
+                app:layout_constraintStart_toEndOf="@+id/buttonShare"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

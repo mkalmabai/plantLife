@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_gragh"
+    app:startDestination="@id/Home_fragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.plant_life.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/signUpActivity"
+        android:name="com.example.plant_life.SignUpActivity"
+        android:label="activity_sign_up"
+        tools:layout="@layout/activity_sign_up" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.plant_life.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.plant_life.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/Home_fragment"
+        android:name="com.example.plant_life.fragments.HomeFragment"
+        android:label="fragment_home_fragment"
+        tools:layout="@layout/fragment_home_fragment" >
+        <argument
+            android:name="PlantName"
+            app:argType="string" />
+        <argument
+            android:name="image"
+            app:argType="string" />
+        <argument
+            android:name="Watering"
+            app:argType="string" />
+        <argument
+            android:name="watarAlarm"
+            app:argType="string" />
+        <argument
+            android:name="backgroundImage"
+            app:argType="string" />
+        <argument
+            android:name="sparingAlarm"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="Temperature"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_Home_fragment_to_ditealsPlantPage"
+            app:destination="@id/ditealsPlantPage" />
+        <action
+            android:id="@+id/action_Home_fragment_to_notification"
+            app:destination="@id/notification" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MayPlant_fragment"
+        android:name="com.example.plant_life.fragments.MyPlant_fragment"
+        android:label="fragment_my_plant_fragment"
+        tools:layout="@layout/fragment_my_plant_fragment" >
+        <action
+            android:id="@+id/action_MayPlant_fragment_to_ditealsPlantPage"
+            app:destination="@id/ditealsPlantPage" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/ditealsPlantPage"
+        android:name="com.example.plant_life.fragments.DetailsPlantPage"
+        android:label="fragment_diteals_plant_page"
+        tools:layout="@layout/fragment_details_plant_page" >
+        <action
+            android:id="@+id/action_ditealsPlantPage_to_Home_fragment"
+            app:destination="@id/Home_fragment" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_ditealsPlantPage_to_MayPlant_fragment"
+            app:destination="@id/MayPlant_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.plant_life.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_ProfileFragment_to_userProileInfoFragment"
+            app:destination="@id/userProileInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProileInfoFragment"
+        android:name="com.example.plant_life.fragments.UserProileInfoFragment"
+        android:label="fragment_user_proile_info"
+        tools:layout="@layout/fragment_user_proile_info" >
+        <action
+            android:id="@+id/action_userProileInfoFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
+        <action
+            android:id="@+id/action_userProileInfoFragment_to_notification"
+            app:destination="@id/notification" />
+    </fragment>
+    <activity
+        android:id="@+id/notification"
+        android:name="com.example.plant_life.Notification"
+        android:label="Notification" />
+
+</navigation>
